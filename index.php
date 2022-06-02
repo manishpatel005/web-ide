@@ -39,7 +39,7 @@ $isMac = false !== strpos($_SERVER['HTTP_USER_AGENT'], "Macintosh") ? true : fal
 <!DOCTYPE html>
 <html onmousedown="ICEcoder.mouseDown = true; ICEcoder.resetAutoLogoutTimer();" onmouseup="ICEcoder.mouseDown = false; ICEcoder.resetAutoLogoutTimer(); ICEcoder.mouseDownInCM = false; if (!ICEcoder.overCloseLink) {ICEcoder.tabDragEnd()}" onmousemove="if ('undefined' !== typeof ICEcoder) {ICEcoder.getMouseXY(event, 'top'); ICEcoder.resetAutoLogoutTimer(); ICEcoder.canResizeFilesW()}" onmousewheel="ICEcoder.resetAutoLogoutTimer(); if (ICEcoder.getcMInstance() && !ICEcoder.getcMInstance().hasFocus() && !ICEcoder.getcMdiffInstance().hasFocus()) {event.wheelDelta > 0 ? ICEcoder.nextTab() : ICEcoder.previousTab();}">
 <head>
-<title>ICEcoder <?php echo $ICEcoder["versionNo"];?></title>
+<title>WEB-IDE</title>
 <!--Updated via settings so must remain 1st stylesheet//-->
 <style>
 	#tabsBar.tabsBar .tab { font-size: <?php echo $ICEcoder["fontSize"];?>; }
@@ -55,7 +55,7 @@ echo $iceURLPath . "/assets/css/theme/";
 echo "default" === $ICEcoder["theme"] ? 'icecoder.css' : $ICEcoder["theme"] . '.css';
 echo "?microtime=" . microtime(true);
 ?>">
-<link rel="icon" type="image/png" href="<?php echo $iceURLPath;?>/assets/images/favicon.png">
+<link rel="icon" type="image/png" href="<?php echo $iceURLPath;?>/assets/images/favicon.ico">
 <script>
 iceRoot = "<?php echo $ICEcoder['root']; ?>";
 

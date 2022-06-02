@@ -43,7 +43,7 @@ h2 {font-size: 18px; font-weight: normal; color: #fff}
     transition: all 0.07s ease-out;
 }
 
-.header {position: absolute; display: inline-block; top: 0; left: 0; width: 100%; height: 15px; background-color: #fff; text-align: right; z-index: 1}
+.header {position: absolute; display: inline-block; top: 0; left: 0; width: 100%; height: 15px; background-color: #fff; text-align: right; z-index: 1; display: none;}
 
 .files {position: absolute; display: inline-block; top: 0; left: 0; height: 100%; width: 250px; background-color: #444; overflow: hidden; z-index: 2;
     transition: background 0.2s ease-out;
@@ -61,7 +61,7 @@ h2 {font-size: 18px; font-weight: normal; color: #fff}
 .files .options .optionsList ul {list-style-type: none; line-height: 24px}
 .files .options .optionsList a {color: #666; text-decoration: none}
 .files .options .optionsList a:hover {color: #fff; cursor: pointer}
-.files input:focus, .password:focus {outline: none; background: rgba(0,198,255,0.5); color: #fff}
+.files input:focus, .password:focus {outline: none; background: rgba(208, 223, 214, 0.879); color: #fff}
 .files .button {position: absolute; border: 0; background: #444; color: #eee; height: 20px; margin-top: 16px; margin-left: 5px; font-size: 11px; cursor: pointer}
 .files .button:hover {background-color: #1d1d1b; color: #eee}
 .files .frame {display: inline-block; width: 250px; margin-top: 24px}
@@ -75,7 +75,7 @@ h2 {font-size: 18px; font-weight: normal; color: #fff}
 .files .tools .info {background: #080}
 
 .editor {position: fixed; display: inline-block; top: 0; left: 15px; width: 2400px}
-.editor .tabsBar {display: inline-block; height: 27px; width: 2400px; margin-top: 15px; padding-left: 53px; background: #fff}
+.editor .tabsBar {display: inline-block; height: 27px; width: 2400px; margin-top: 0; padding-left: 53px; background: gray}
 .tabsBar .tab {position: absolute; display: none; height: 15px; padding: 6px 8px 6px 9px; border-right: 1px solid #ddd; color: #fff; white-space: nowrap; overflow: hidden; cursor: pointer; z-index: 1;
     transition: width, left 0.15s ease-in-out;
 }
@@ -165,12 +165,12 @@ h2 {font-size: 18px; font-weight: normal; color: #fff}
 .screenContainer .screenVCenter {#position: absolute; display: table-cell; #top: 50%; vertical-align: middle; text-align: center}
 .screenVCenter .screenCenter {#position: relative; #top: -50%; text-align: center; display: inline}
 .screenCenter .version {position: relative; display: block; margin: 5px 0 15px 0; font-size: 10px; color: #bbb}
-.screenCenter .text {position: relative; display: block; margin-top: 15px; font-size: 10px; color: #888}
+.screenCenter .text {position: relative; display: block; margin-top: 15px; font-size: 10px; color: #f6f6f6}
 .screenCenter .text input {margin-top: 1px}
 .screenCenter .text a {position: relative; display: block; margin-top: 15px; font-size: 10px; color: #888; text-decoration: none}
 .screenCenter .adminUser {margin-bottom: 15px; color: #bbb}
-.screenCenter .password {border: 0; background-color: #333; color: #fff; height: 20px}
-.screenCenter .password:focus {outline: none; background: rgba(0,198,255,0.5); color: #fff}
-.screenCenter .button {border: 0; background: #444; color: #eee; height: 22px; cursor: pointer}
+.screenCenter .password {border: 0; background-color: rgb(2,27,70); color: #fff; height: 30px; width: 20%; margin-top: 20px; border-radius: 5px;padding-left: 15px;}
+.screenCenter .password:focus {outline: none; background: rgba(216, 227, 230, 0.893); color: #fff}
+.screenCenter .button {border: 0; background: #444; color: #eee; height: 30px; cursor: pointer; width: 11%; margin-top: 14px; border-radius: 5px; letter-spacing: 1px; padding: 0 10px}
 .screenCenter .button:hover {background: #2187e7; color: #eee}
 .screenCenter .iconCapsLock {position: absolute; margin-left: 2px; color: #888}
