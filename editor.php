@@ -96,36 +96,16 @@ h2 {color: rgba(0,198,255,0.7)}
 <div class="dataMessage" id="dataMessage"></div>
 
 <div class="dataItemsContainer">
-	<div class="dataItems" style="width: 300px; margin-right: 50px">
-		<h2><?php echo $t['server'];?></h2>
-		<span class="heading"><?php echo $t['Server name, OS...'];?></span><br>
-		<?php
-        $serverAddr = $_SERVER['SERVER_ADDR'] ?? "1";
-        if ("1" == $serverAddr || "::1" == $serverAddr) {
-            $serverAddr = "127.0.0.1";
-        }
-        echo
-            $_SERVER['SERVER_NAME'] . " &nbsp;&nbsp " .
-            $serverType . " &nbsp;&nbsp " .
-            $serverAddr . ":" . $_SERVER['SERVER_PORT'] . "<br>" .
-            "(" . $_SERVER['SERVER_SOFTWARE'] . ")";?><br><br>
-		<span class="heading"><?php echo $t['Root'];?></span><br>
-		<?php echo $docRoot;?><br><br>
-		<span class="heading"><?php echo $t['ICEcoder root'];?></span><br>
-		<div id="iceRootDisplay"><?php echo "" !== $iceRoot ? $iceRoot : "[Default]";?></div><br><br>
-		<span class="heading"><?php echo $t['PHP version'];?></span><br>
-		<?php echo phpversion();?><br><br>
-		<span class="heading"><?php echo $t['Date & time'];?></span><br>
-		<span id="serverDT"></span><br><br>
-		<h2><?php echo $t['your device'];?></h2>
-		<span class="heading"><?php echo $t['Browser'];?></span><br>
-		<?php echo xssClean($_SERVER['HTTP_USER_AGENT'], "html");?><br><br>
-		<span class="heading"><?php echo $t['Your IP'];?></span><br>
-		<?php echo getUserIP();?><br><br>
+	
+	<h1 class="heading" style="text-align: center;">!! Welcome to the Arista way of coding !!</h1>
+	<div class="dataItems" style="width: 50%; margin-right: 50px">
+		<h2>Start</h2>
+		<span class="heading">**select files from left panel</span><br>
+		
 	</div>
-
 	<div class="dataItems">
-		<h2><?php echo $t['files'];?></h2>
+		<h2>Recent</h2>
+		
 		<span class="heading"><?php echo $t['Last 10 files...'];?></span><br>
 		<ul class="fileManager" id="last10Files" style="margin-top: 5px; margin-left: 0; line-height: 21px"><?php
             if (empty($ICEcoder["last10Files"])) {
@@ -145,31 +125,6 @@ h2 {color: rgba(0,198,255,0.7)}
                 }
 			}
 		;?></ul>
-        <?php
-        if ("" !== $_SESSION['username']) {
-            ?>
-            <h2><?php echo $t['multi-user']; ?></h2>
-            <span class="heading"><?php echo $t['Username']; ?></span><br>
-            <?php echo xssClean($_SESSION['username'], "html");?><br><br>
-            <?php
-        }
-        ?>
-		<h2>ICEcoder</h2>
-		<span class="heading"><?php echo $t['version'];?></span><br>
-		<?php
-		// If we have a .git dir, get the Git short commit hash to display as a link
-		$gitCommitTextLink = "";
-		if (true === $systemClass->functionEnabled("shell_exec") && is_dir(dirname(__FILE__) . "/.git")) {
-			$gitCommit = trim(shell_exec('git log --pretty="%h" -n1 HEAD'));
-			$gitCommitTextLink = ' (Git commit: <a href="https://github.com/icecoder/ICEcoder/commit/' . $gitCommit . '" style="color: #eee; text-decoration: none" target="_blank">' . $gitCommit . '</a>)';
-		}
-		echo $ICEcoder["versionNo"] . $gitCommitTextLink;
-		?><br><br>
-		<span class="heading"><?php echo $t['codemirror version'];?></span><br>
-		<script>
-		document.write(CodeMirror.version);
-		</script>
-		<br><br>
 	</div>
 
 	<div style="clear: both"></div>

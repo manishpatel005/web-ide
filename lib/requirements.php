@@ -34,7 +34,7 @@ if (false === empty($reqsFailures)) {
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <link rel="stylesheet" type="text/css" href="../assets/css/resets.css?microtime=<?php echo microtime(true);?>">
 <link rel="stylesheet" type="text/css" href="../assets/css/icecoder.css?microtime=<?php echo microtime(true);?>">
-<link rel="icon" type="image/png" href="../assets/images/favicon.png">
+<link rel="icon" type="image/png" href="../assets/images/favicon.ico">
 </head>
 
 <body style="background-color: #181817" onLoad="setTimeout(function(){document.getElementById('screenContainer').style.opacity = '1'}, 50)">
