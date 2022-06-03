@@ -15,5 +15,4 @@ name:
 	read -p "Enter username: " name; echo name
 
 run:
-	read -p "Enter username: " name; cd ..; ln -s "$$(pwd)" "/var/www/html/$$name";	echo "/var/www/html/$$name";
-
+	read -p "Enter username: " name; read -p "Enter user server: " server; cd ..; ln -s "$$(pwd)" "/var/www/html/$$name";	echo "/var/www/html/$$name"; sed -i "s,\"root\";s:1:\"/\",\"root\";s:$${#name}:\"/$$name\",gi" $$(pwd)/web-ide/data/config-admin-$$server.php
