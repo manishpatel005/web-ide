@@ -295,9 +295,6 @@ if (true === $havePrettier && true === file_exists(dirname(__FILE__) . "/plugins
 
     <div class="tools" id="tools">
         <div onclick="ICEcoder.toolShowHideToggle('terminal')" id="toolLinkTerminal" title="Terminal"><?php echo file_get_contents(dirname(__FILE__) . "/assets/images/icons/terminal-2.svg");?></div>
-        <div onclick="ICEcoder.toolShowHideToggle('output'); this.className = ''" id="toolLinkOutput" title="Output"><?php echo file_get_contents(dirname(__FILE__) . "/assets/images/icons/layout-list.svg");?></div>
-        <div onclick="ICEcoder.toolShowHideToggle('database')" id="toolLinkDatabase" title="Database"><?php echo file_get_contents(dirname(__FILE__) . "/assets/images/icons/database.svg");?></div>
-        <div onclick="ICEcoder.toolShowHideToggle('git')" id="toolLinkGit" title="Git"><?php echo file_get_contents(dirname(__FILE__) . "/assets/images/icons/git-compare.svg");?></div>
     </div>
 </div>
 
