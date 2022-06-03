@@ -16,3 +16,6 @@ name:
 
 run:
 	read -p "Enter username: " name; read -p "Enter user server: " server; cd ..; ln -s "$$(pwd)" "/var/www/html/$$name";	echo "/var/www/html/$$name"; sed -i "s,\"root\";s:1:\"/\",\"root\";s:$${#name}:\"/$$name\",gi" $$(pwd)/web-ide/data/config-admin-$$server.php
+	sudo chmod -R 777 ../*
+	sudo chown -R www-data.www-data
+	echo "Open http://<user_server>/<user_name>/ in your browser"
